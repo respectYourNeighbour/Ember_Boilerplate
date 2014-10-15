@@ -9,14 +9,33 @@
 </head>
 <body>
 
-  <script type='text/x-handlebars'>
-    <div class='navbar'></div>
-    <div class='container'>
-      <h1>Welcome to {{siteName}}!</h1>
+  <script type='text/x-handlebars' data-template-name='application'>
+    <div class='navbar'>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <ul class="nav navbar-nav pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
     </div>
-
+    <div class='container'>
+      {{outlet}}
+    </div>
     <footer class='container'></footer>
   </script>
+
+  <script type='text/x-handlebars' data-template-name='index'>
+    <h1>Index Page.</h1>
+    <hr/>
+  </script>
+
+   <script type='text/x-handlebars' data-template-name='about'>
+    <h1>About Page.</h1>
+    <hr/>
+  </script>
+
+
 
   <script src="js/libs/jquery-1.10.2.js"></script>
   <script src="js/libs/handlebars-1.1.2.js"></script>
