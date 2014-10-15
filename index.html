@@ -13,9 +13,21 @@
     <div class='navbar'>
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <ul class="nav navbar-nav pull-right">
-            <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-            <li>{{#link-to 'about'}}About{{/link-to}}</li>
-            <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+            {{#link-li}}
+              {{#link-to 'index'}}
+                Home
+              {{/link-to}}
+            {{/link-li}}
+            {{#link-li}}
+              {{#link-to 'about'}}
+                About
+              {{/link-to}}
+            {{/link-li}}
+            {{#link-li}}
+              {{#link-to 'contact'}}
+                Contact
+              {{/link-to}}
+            {{/link-li}}
           </ul>
       </nav>
     </div>
