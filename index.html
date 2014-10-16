@@ -40,11 +40,25 @@
   <script type='text/x-handlebars' data-template-name='index'>
     <h1>Index Page.</h1>
     <hr/>
+    <p>Number of products: {{productsCount}}</p>
   </script>
 
-   <script type='text/x-handlebars' data-template-name='about'>
+  <script type='text/x-handlebars' data-template-name='about'>
     <h1>About Page.</h1>
     <hr/>
+    <p>{{numeAbout}}</p>
+    <hr/>
+    <p>This image get's it's src from the Controller.</p>
+    <p><img {{bind-attr src='logo'}} lat='Logo'></p>
+  </script>
+
+  <script type='text/x-handlebars' data-template-name='contact'>
+    <h1>Contact Page.</h1>
+    <hr/>
+    <p>The exact Date is: {{time}}</p>
+    <hr/>
+    <p>This Template calls a function that exist's inside the Controller, and the function returns something. In this case the Date.</p>
+    <p>It is important to know for this fact that you need to add .property() at the end of the function.</p>
   </script>
 
 
