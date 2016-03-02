@@ -28,6 +28,11 @@
                 Contact
               {{/link-to}}
             {{/link-li}}
+            {{#link-li}}
+              {{#link-to 'products'}}
+                Products
+              {{/link-to}}
+            {{/link-li}}
           </ul>
       </nav>
     </div>
@@ -60,6 +65,37 @@
     <p>This Template calls a function that exist's inside the Controller, and the function returns something. In this case the Date.</p>
     <p>It is important to know for this fact that you need to add .property() at the end of the function.</p>
   </script>
+
+  <script type='text/x-handlebars' data-template-name='products'>
+    <h1>Products Page.</h1>
+    <hr/>
+    <div class='row'>
+    {{#each product in model}}
+      <div class='col-md-2 product'>
+        <div class='insider'>
+          <img {{bind-attr src='product.image'}} class='img-thumbnail' />
+          <h2>{{product.title}}</h2>
+          <p>{{product.description}}</p>
+          <p><button class='btn btn-block'>Click {{product.price}}</button></p>
+          {{#link-to 'product' product.title classNames = 'list-group-item'}}
+            {{product.title}}
+          {{/link-to}}
+        </div>
+      </div>
+    {{/each}}
+    </div>
+  </script>
+
+
+  <script type='text/x-handlebars' data-template-name='product'>
+    <h1>Product Page.</h1>
+    <hr/>
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+  </script>
+
+
+
 
 
 
